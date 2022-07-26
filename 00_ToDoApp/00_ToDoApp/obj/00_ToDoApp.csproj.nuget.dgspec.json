@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hill\\Desktop\\00_Temp\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj": {}
+    "C:\\Users\\natha\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hill\\Desktop\\00_Temp\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj": {
+    "C:\\Users\\natha\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hill\\Desktop\\00_Temp\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj",
+        "projectUniqueName": "C:\\Users\\natha\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj",
         "projectName": "00_ToDoApp",
-        "projectPath": "C:\\Users\\hill\\Desktop\\00_Temp\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj",
-        "packagesPath": "C:\\Users\\hill\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hill\\Desktop\\00_Temp\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\obj\\",
+        "projectPath": "C:\\Users\\natha\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj",
+        "packagesPath": "C:\\Users\\natha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\natha\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hill\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\natha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,6 +49,38 @@
               "target": "Package",
               "version": "[6.0.4, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
             "MudBlazor": {
               "target": "Package",
               "version": "[6.0.9, )"
@@ -67,7 +99,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[6.0.7, 6.0.7]"
+              "version": "[6.0.5, 6.0.5]"
             }
           ],
           "frameworkReferences": {
@@ -75,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

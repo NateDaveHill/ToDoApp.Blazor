@@ -11,3 +11,18 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddMudServices();
 
 await builder.Build().RunAsync();
+
+
+
+
+string dbName = "ToDo.db";
+if (File.Exists(dbName))
+{
+    File.Delete(dbName);
+}
+
+using (var context = new MyDbContext())
+{
+    context.Database.EnsureCreated();
+    context.SaveChanges();
+} ;
