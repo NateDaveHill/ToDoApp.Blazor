@@ -23,12 +23,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/hill/Source/Repos/NateDaveHill/00_MyProjects/00_ToDoApp/ToDoApp/Pages/Days/Monday.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF5c1xNb25kYXkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hill/Source/Repos/NateDaveHill/00_MyProjects/00_ToDoApp/ToDoApp/Pages/Friday.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRnJpZGF5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/hill/Source/Repos/NateDaveHill/00_MyProjects/00_ToDoApp/ToDoApp/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hill/Source/Repos/NateDaveHill/00_MyProjects/00_ToDoApp/ToDoApp/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+[C:/Users/hill/Source/Repos/NateDaveHill/00_MyProjects/00_ToDoApp/ToDoApp/Pages/Saturday.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2F0dXJkYXkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hill/Source/Repos/NateDaveHill/00_MyProjects/00_ToDoApp/ToDoApp/Pages/Sunday.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VuZGF5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hill/Source/Repos/NateDaveHill/00_MyProjects/00_ToDoApp/ToDoApp/Pages/Thursday.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGh1cnNkYXkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hill/Source/Repos/NateDaveHill/00_MyProjects/00_ToDoApp/ToDoApp/Pages/Tuesday.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHVlc2RheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hill/Source/Repos/NateDaveHill/00_MyProjects/00_ToDoApp/ToDoApp/Pages/Wednesday.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VkbmVzZGF5LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hill/Source/Repos/NateDaveHill/00_MyProjects/00_ToDoApp/ToDoApp/_Imports.razor]
