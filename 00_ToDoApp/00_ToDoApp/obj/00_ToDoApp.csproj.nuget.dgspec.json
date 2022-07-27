@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\natha\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj": {}
+    "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\natha\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj": {
+    "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\natha\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj",
+        "projectUniqueName": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj",
         "projectName": "00_ToDoApp",
-        "projectPath": "C:\\Users\\natha\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj",
-        "packagesPath": "C:\\Users\\natha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\natha\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\obj\\",
+        "projectPath": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\00_ToDoApp.csproj",
+        "packagesPath": "C:\\Users\\hill\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\00_ToDoApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\natha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hill\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,7 +99,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[6.0.5, 6.0.5]"
+              "version": "[6.0.7, 6.0.7]"
             }
           ],
           "frameworkReferences": {
@@ -107,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

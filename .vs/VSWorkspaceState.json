@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\00_ToDoApp",
+    "\\00_ToDoApp\\00_ToDoApp"
   ],
-  "SelectedNode": "\\00_ToDoApp.sln (00_ToDoApp\\00_ToDoApp\\00_ToDoApp.sln)",
+  "SelectedNode": "\\00_ToDoApp\\00_ToDoApp\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
