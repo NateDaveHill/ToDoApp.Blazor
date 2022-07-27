@@ -8,21 +8,11 @@ public class MyDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Filename=ToDo.db",
-            options => { options.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName); });
-            base.OnConfiguring(optionsBuilder);
-    }
+        var connectionsStringBuilder = new SqliteConnectionStringBuilder { DataSource = "ToDos.db"};
+        var connectionString = connectionsStringBuilder.ToString();
+        var connection = new SqliteConnection(connectionString);
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<ToDos>().ToTable("ToDos", "Test");
-        modelBuilder.Entity<ToDos>(entity =>
-        {
-            entity.HasKey(e => e.ToDoId);
-            entity.HasIndex(e => e.Title).IsUnique();
-            entity.Property(e => e.DateTimeAdd).HasDefaultValue("CURRENT_TIMESTAMP");
-        });
-        base.OnModelCreating(modelBuilder);
+        optionsBuilder.UseSqlite(connection);
 
     }
 }
