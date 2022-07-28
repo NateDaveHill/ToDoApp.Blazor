@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj": {}
+    "C:\\Users\\hill\\source\\repos\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj": {
+    "C:\\Users\\hill\\source\\repos\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj",
+        "projectUniqueName": "C:\\Users\\hill\\source\\repos\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj",
         "projectName": "DataBase",
-        "projectPath": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj",
+        "projectPath": "C:\\Users\\hill\\source\\repos\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj",
         "packagesPath": "C:\\Users\\hill\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\DataBase\\obj\\",
+        "outputPath": "C:\\Users\\hill\\source\\repos\\00_MyProjects\\00_ToDoApp\\DataBase\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hill\\AppData\\Roaming\\NuGet\\NuGet.Config",

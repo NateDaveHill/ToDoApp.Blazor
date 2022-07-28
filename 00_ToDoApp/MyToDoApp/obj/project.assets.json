@@ -1683,11 +1683,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\MyToDoApp\\MyToDoAppMudBlazor.csproj",
+      "projectUniqueName": "C:\\Users\\hill\\source\\repos\\00_MyProjects\\00_ToDoApp\\MyToDoApp\\MyToDoAppMudBlazor.csproj",
       "projectName": "MyToDoAppMudBlazor",
-      "projectPath": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\MyToDoApp\\MyToDoAppMudBlazor.csproj",
+      "projectPath": "C:\\Users\\hill\\source\\repos\\00_MyProjects\\00_ToDoApp\\MyToDoApp\\MyToDoAppMudBlazor.csproj",
       "packagesPath": "C:\\Users\\hill\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\MyToDoApp\\obj\\",
+      "outputPath": "C:\\Users\\hill\\source\\repos\\00_MyProjects\\00_ToDoApp\\MyToDoApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hill\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1704,8 +1704,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj": {
-              "projectPath": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj"
+            "C:\\Users\\hill\\source\\repos\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj": {
+              "projectPath": "C:\\Users\\hill\\source\\repos\\00_MyProjects\\00_ToDoApp\\DataBase\\DataBase.csproj"
             }
           }
         }
