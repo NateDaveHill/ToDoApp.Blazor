@@ -1,29 +1,46 @@
 ﻿@page "/monday"
+@using Microsoft.Extensions.WebEncoders.Testing
 
 <h3>Monday</h3>
 
-<textarea ></textarea>
-<textarea ></textarea>
-<button @onclick="Created()">create</button>
+<MudTextField @bind-Value="TempToDos.Title"></MudTextField>
+<MudTextField @bind-Value="TempToDos.Comment"></MudTextField>
+<MudButton @onclick="Created" Variant="Variant.Filled" Color="Color.Success">Create</MudButton>
+
+@foreach (var test in ToDos)
+{
+    <MudCheckBox T="string">@test.Title</MudCheckBox>
+}
+
 
 @code {
 
-    public ToDos? TempToDos { get; set; }
+    ToDos TempToDos = new ToDos();
+    public List<ToDos> ToDos;
 
     protected override void OnInitialized()
     {
+        using (MyDbContext context = new MyDbContext())
+        {
+            context.Database.EnsureCreated();
+            ToDos = context.ToDos.Select(x => x).ToList();
+        }
     }
 
-    private EventCallback Created()
+    private async Task Created()
     {
-        ToDos todo = new ToDos()
+        await using (MyDbContext context = new MyDbContext())
         {
-            Title = TempToDos.Title,
-            Comment = TempToDos.Comment,
-            Created = DateTime.Now,
-            IsDone = false
-        };
-        return EventCallback.Empty;
+            context.ToDos.Add(new ToDos()
+            {
+                Title = TempToDos.Title,
+                Comment = TempToDos.Comment,
+                Created = DateTime.Now,
+                IsDone = false
+            });
+
+            context.SaveChanges();
+        }
     }
 
 }
