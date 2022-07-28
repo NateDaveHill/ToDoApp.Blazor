@@ -1,5 +1,6 @@
 ﻿@page "/monday"
 @using Microsoft.Extensions.WebEncoders.Testing
+@using Microsoft.EntityFrameworkCore.Internal
 
 <h3>Monday</h3>
 
@@ -9,7 +10,7 @@
 
 @foreach (var test in ToDos)
 {
-    <MudCheckBox T="string">@test.Title</MudCheckBox>
+    <MudCheckBox T="string">ToDo: @test.Title</MudCheckBox>
 }
 
 
@@ -38,8 +39,8 @@
                 Created = DateTime.Now,
                 IsDone = false
             });
-
             context.SaveChanges();
+            ToDos = context.ToDos.Select(x => x).ToList();
         }
     }
 
