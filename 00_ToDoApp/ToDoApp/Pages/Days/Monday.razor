@@ -2,6 +2,25 @@
 
 <h3>Monday</h3>
 
+<textarea >TempToDos.Title</textarea>
+<textarea >TempToDos.Comment</textarea>
+<button @onclick="Created()">create</button>
+
 @code {
+
+    public static ToDos? TempToDos { get; set; }
+
+
+    private EventCallback Created()
+    {
+        ToDos todo = new ToDos()
+        {
+            Title = TempToDos.Title,
+            Comment = TempToDos.Comment,
+            Created = DateTime.Now,
+            IsDone = false
+        };
+        return EventCallback.Empty;
+    }
 
 }

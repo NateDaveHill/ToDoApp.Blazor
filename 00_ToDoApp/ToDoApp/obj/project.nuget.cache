@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6rKvpUFYTBMQgByVvBV1kH6r88vqg8pRGjxqz1CGuw9bziUtlMliFJxxUPDYBNQHV7irPJq7EeEyLPfzbIaBlg==",
+  "dgSpecHash": "ciScomOZYlq/l7ShIaDLYyxpVLJuUQKUe25Y1oQHRMkjXD4wykKhsgBkD/FpbX/Rr5NiHXuGgW3yDpmDkh7zMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\ToDoApp\\ToDoApp.csproj",
+  "projectFilePath": "C:\\Users\\hill\\Source\\Repos\\NateDaveHill\\00_MyProjects\\00_ToDoApp\\ToDoApp\\MyToDoAppBlazor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hill\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.4\\microsoft.aspnetcore.authorization.6.0.4.nupkg.sha512",
     "C:\\Users\\hill\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.4\\microsoft.aspnetcore.components.6.0.4.nupkg.sha512",
