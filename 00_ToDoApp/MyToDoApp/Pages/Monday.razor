@@ -13,7 +13,7 @@
 
 @foreach (var test in ToDos)
 {
-    <MudCheckBox @bind-Checked="@TempToDos.IsDone" T="bool" Color="Color.Primary">
+    <MudCheckBox @bind-Checked="@test.IsDone" T="bool" Color="Color.Primary">
         ToDo: @test.Title
         <br/>
         Comment: @test.Comment
