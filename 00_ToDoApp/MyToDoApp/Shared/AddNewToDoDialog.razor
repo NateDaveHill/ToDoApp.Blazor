@@ -1,7 +1,10 @@
 ﻿@using MyToDoAppMudBlazor.Pages
 <MudDialog>
     <DialogContent>
+        <h3>Title</h3>
         <MudTextField @bind-Value="TempToDos.Title"></MudTextField>
+        <br/>
+        <h3>Comments</h3>
         <MudTextField @bind-Value="TempToDos.Comment"></MudTextField>
     </DialogContent>
     <DialogActions>

@@ -13,6 +13,7 @@
 
 @foreach (var test in ToDos)
 {
+    <br/>
     <MudCheckBox @bind-Checked="@test.IsDone" T="bool" Color="Color.Primary">
         ToDo: @test.Title
         <br/>
@@ -43,7 +44,6 @@
     {
         var options = new DialogOptions { CloseOnEscapeKey = true };
         DialogService.Show<AddNewToDoDialog>("Add new To Do", options);
-        Refresh();
     }
 
     private void Refresh()
