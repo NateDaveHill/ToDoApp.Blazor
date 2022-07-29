@@ -32,9 +32,9 @@
         }
     }
 
-    private async Task Created()
+    private void Created()
     {
-        await using (var context = new MyDbContext())
+        using (var context = new MyDbContext())
         {
             context.ToDos.Add(new ToDos
             {
