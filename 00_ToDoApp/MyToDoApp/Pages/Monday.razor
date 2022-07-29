@@ -17,7 +17,7 @@
 
 
 @code {
-
+    
     readonly ToDos TempToDos = new();
     public List<ToDos>? ToDos;
 
@@ -26,7 +26,6 @@
         
         using (var context = new MyDbContext())
         {
-            context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
             ToDos = context.ToDos.Select(x => x).ToList();
         }
@@ -36,6 +35,7 @@
     {
         var options = new DialogOptions { CloseOnEscapeKey = true };
         DialogService.Show<AddNewToDoDialog>("Add new To Do", options);
+        
     }
 
 }
