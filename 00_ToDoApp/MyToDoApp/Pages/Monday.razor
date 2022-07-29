@@ -24,7 +24,8 @@
 
 
 @code {
-    
+
+    MudDialogInstance MudDialog;
     readonly ToDos TempToDos = new();
     public List<ToDos>? ToDos;
 
@@ -42,7 +43,14 @@
     {
         var options = new DialogOptions { CloseOnEscapeKey = true };
         DialogService.Show<AddNewToDoDialog>("Add new To Do", options);
-        
+        Refresh();
     }
 
+    private void Refresh()
+    {
+        using (var context = new MyDbContext())
+        {
+            ToDos = context.ToDos.Select(x => x).ToList();
+        }
+    }
 }
