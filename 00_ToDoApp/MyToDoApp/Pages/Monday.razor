@@ -26,6 +26,7 @@
         
         using (var context = new MyDbContext())
         {
+            context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
             ToDos = context.ToDos.Select(x => x).ToList();
         }
