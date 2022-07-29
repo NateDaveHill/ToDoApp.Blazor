@@ -8,6 +8,7 @@
 
 
 <MudFab @onclick="OpenDialog" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" />
+<br/>
 
 
 @foreach (var test in ToDos)
@@ -17,6 +18,8 @@
         <br/>
         Comment: @test.Comment
     </MudCheckBox>
+    <br/>
+
 }
 
 
