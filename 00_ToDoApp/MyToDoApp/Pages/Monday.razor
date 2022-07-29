@@ -10,14 +10,14 @@
 
 @foreach (var test in ToDos)
 {
-    <MudCheckBox T="string">ToDo: @test.Title</MudCheckBox>
+    <MudCheckBox @bind-Checked="@TempToDos.IsDone" T="bool" Color="Color.Primary" >ToDo: @test.Title</MudCheckBox>
 }
 
 
 @code {
 
     ToDos TempToDos = new ToDos();
-    public List<ToDos> ToDos;
+    public List<ToDos>? ToDos;
 
     protected override void OnInitialized()
     {
