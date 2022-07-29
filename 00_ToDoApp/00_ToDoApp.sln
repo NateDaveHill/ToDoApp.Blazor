@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBase", "DataBase\DataBa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyToDoAppBlazor", "ToDoApp\MyToDoAppBlazor.csproj", "{E1CCBDB9-0533-4780-BA00-B027E8E8FE8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyToDoAppMudBlazor", "MyToDoApp\MyToDoAppMudBlazor.csproj", "{889A2FE3-6B88-4FD7-A9D3-96A64499A25F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyToDoAppMudBlazor", "MyToDoApp\MyToDoAppMudBlazor.csproj", "{889A2FE3-6B88-4FD7-A9D3-96A64499A25F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

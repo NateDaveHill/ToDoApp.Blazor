@@ -1,47 +1,40 @@
 ﻿@page "/monday"
-@using Microsoft.Extensions.WebEncoders.Testing
-@using Microsoft.EntityFrameworkCore.Internal
+@using MyToDoAppMudBlazor.Shared
+
+@inject IDialogService DialogService
+
 
 <h3>Monday</h3>
 
-<MudTextField @bind-Value="TempToDos.Title"></MudTextField>
-<MudTextField @bind-Value="TempToDos.Comment"></MudTextField>
-<MudButton @onclick="Created" Variant="Variant.Filled" Color="Color.Success">Create</MudButton>
+
+<MudIconButton @onclick="OpenDialog" Color="Color.Success" Icon="@Icons.Filled.Add"></MudIconButton>
+
 
 @foreach (var test in ToDos)
 {
-    <MudCheckBox @bind-Checked="@TempToDos.IsDone" T="bool" Color="Color.Primary" >ToDo: @test.Title</MudCheckBox>
+    <MudCheckBox @bind-Checked="@TempToDos.IsDone" T="bool" Color="Color.Primary">ToDo: @test.Title</MudCheckBox>
 }
 
 
 @code {
 
-    ToDos TempToDos = new ToDos();
+    readonly ToDos TempToDos = new();
     public List<ToDos>? ToDos;
 
     protected override void OnInitialized()
     {
-        using (MyDbContext context = new MyDbContext())
+        
+        using (var context = new MyDbContext())
         {
             context.Database.EnsureCreated();
             ToDos = context.ToDos.Select(x => x).ToList();
         }
     }
 
-    private async Task Created()
+    private void OpenDialog()
     {
-        await using (MyDbContext context = new MyDbContext())
-        {
-            context.ToDos.Add(new ToDos()
-            {
-                Title = TempToDos.Title,
-                Comment = TempToDos.Comment,
-                Created = DateTime.Now,
-                IsDone = false
-            });
-            context.SaveChanges();
-            ToDos = context.ToDos.Select(x => x).ToList();
-        }
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<AddNewToDoDialog>("Add new To Do", options);
     }
 
 }
