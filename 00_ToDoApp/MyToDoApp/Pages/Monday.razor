@@ -10,19 +10,23 @@
 <MudFab @onclick="OpenDialog" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add"/>
 <br/>
 
+<MudGrid>
 @foreach (var test in ToDos)
 {
-    <br/>
-    <MudPaper Height="150px" Width="200px" Elevation="3" Class="pa-4"
-              Style="@($"color:{Theme.Palette.Dark}; background:{Theme.Palette.Warning};")">
-        <MudCheckBox @bind-Checked="@test.IsDone" T="bool" Color="Color.Primary">
-            ToDo: @test.Title
-            <br/>
-            Comment: @test.Comment
-        </MudCheckBox>
-    </MudPaper>
-    <br/>
+    <MudItem xs="6" sm="3">
+        <br/>
+        <MudPaper Height="150px" Width="200px" Elevation="3" Class="pa-4"
+                Style="@($"color:{Theme.Palette.Dark}; background:{Theme.Palette.Warning};")">
+            <MudCheckBox @bind-Checked="@test.IsDone" T="bool" Color="Color.Primary">
+                ToDo: @test.Title
+                <br/>
+                Comment: @test.Comment
+            </MudCheckBox>
+        </MudPaper>
+        <br/>
+    </MudItem>
 }
+</MudGrid>
 
 
 @code {
