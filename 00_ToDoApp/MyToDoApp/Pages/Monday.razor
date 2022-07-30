@@ -74,7 +74,7 @@
         if (result.Data.Equals(true))
         {
             dialog.Close();
-            OnInitialized();
+            Refresh();
         }
     }
 
@@ -85,7 +85,7 @@
             var deleteToDo = context.ToDos.Where(x => x.Id == toDoId).First();
             context.Remove(deleteToDo);
             context.SaveChanges();
-            OnInitialized();
+            Refresh();
         }
     }
 
@@ -99,7 +99,15 @@
                 context.ToDos.Remove(todo);
             }
             context.SaveChanges();
-            OnInitialized();
+            Refresh();
+        }
+    }
+
+    private void Refresh()
+    {
+        using (var context = new MyDbContext())
+        {
+            ToDos = context.ToDos.Select(x => x).ToList();
         }
     }
 
