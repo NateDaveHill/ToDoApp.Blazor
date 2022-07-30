@@ -13,7 +13,7 @@
 @foreach (var test in ToDos)
 {
     <br/>
-    <MudPaper Height="200px" Width="200px" Elevation="3" Class="pa-4"
+    <MudPaper Height="150px" Width="200px" Elevation="3" Class="pa-4"
               Style="@($"color:{Theme.Palette.Dark}; background:{Theme.Palette.Warning};")">
         <MudCheckBox @bind-Checked="@test.IsDone" T="bool" Color="Color.Primary">
             ToDo: @test.Title
