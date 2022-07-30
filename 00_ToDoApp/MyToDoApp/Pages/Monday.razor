@@ -5,39 +5,46 @@
 
 
 <h3>Monday</h3>
-
-
-<MudFab @onclick="OpenDialog" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add"/>
 <br/>
 
 <MudGrid>
-    @foreach (var toDo in ToDos)
-    {
-        <MudItem xs="6" sm="3">
-            <br/>
-            <MudPaper Height="150px" Width="200px" Elevation="3" Class="p-4"
-                      Style="@($"color:{Theme.Palette.Dark}; background:{Theme.Palette.Warning};")">
-                <MudGrid>
-                    <MudItem xs="12">
-                        <MudCheckBox @bind-Checked="@toDo.IsDone" T="bool" Color="Color.Primary">
-                            ToDo: @toDo.Title
-                            <br/>
-                            Comment: @toDo.Comment
-                        </MudCheckBox>
-                    </MudItem>
-                    <MudItem xs="3"/>
-                    <MudItem xs="3"/>   
-                    <MudItem xs="3">
-                        <MudFab class="" Size="Size.Small" @onclick="(args) => DeleteToDo(args, toDo.Id)"
-                                Color="Color.Error" StartIcon="@Icons.Material.Filled.Remove"/>
-                    </MudItem>
-                </MudGrid>
-
-
-            </MudPaper>
-            <br/>
-        </MudItem>
-    }
+    <MudItem xs="11">
+        <MudFab @onclick="OpenDialog" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add"/>
+        <br/>
+    </MudItem>
+    <MudItem xs="1">
+        <MudFab class="" Size="Size.Large" @onclick="DeleteAllToDos"
+                Color="Color.Error" StartIcon="@Icons.Material.Filled.Remove"/>
+    </MudItem>
+    <MudItem xs="12">
+        <MudGrid>
+            @foreach (var toDo in ToDos)
+            {
+                <MudItem xs="6" sm="3">
+                    <br/>
+                    <MudPaper Height="150px" Width="200px" Elevation="3" Class="p-4"
+                              Style="@($"color:{Theme.Palette.Dark}; background:{Theme.Palette.Warning};")">
+                        <MudGrid>
+                            <MudItem xs="12">
+                                <MudCheckBox @bind-Checked="@toDo.IsDone" T="bool" Color="Color.Primary">
+                                    ToDo: @toDo.Title
+                                    <br/>
+                                    Comment: @toDo.Comment
+                                </MudCheckBox>
+                            </MudItem>
+                            <MudItem xs="3"/>
+                            <MudItem xs="3"/>
+                            <MudItem xs="3">
+                                <MudFab class="" Size="Size.Small" @onclick="args => DeleteToDo(args, toDo.Id)"
+                                        Color="Color.Error" StartIcon="@Icons.Material.Filled.Remove"/>
+                            </MudItem>
+                        </MudGrid>
+                    </MudPaper>
+                    <br/>
+                </MudItem>
+            }
+        </MudGrid>
+    </MudItem>
 </MudGrid>
 
 
@@ -77,6 +84,20 @@
         {
             var deleteToDo = context.ToDos.Where(x => x.Id == toDoId).First();
             context.Remove(deleteToDo);
+            context.SaveChanges();
+            OnInitialized();
+        }
+    }
+
+    private void DeleteAllToDos()
+    {
+        using (var context = new MyDbContext())
+        {
+            var allToDos = context.ToDos.Select(x => x).ToList();
+            foreach (var todo in allToDos)
+            {
+                context.ToDos.Remove(todo);
+            }
             context.SaveChanges();
             OnInitialized();
         }
