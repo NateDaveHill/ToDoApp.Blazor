@@ -3,18 +3,22 @@
 
 @inject IDialogService DialogService
 
-
 <h3>Monday</h3>
 <br/>
 
 <MudGrid>
-    <MudItem xs="11">
+    <MudItem xs="10">
+        <h3>Add New ToDo</h3>
+        <br/>
         <MudFab @onclick="OpenDialog" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add"/>
         <br/>
     </MudItem>
-    <MudItem xs="1">
+    <MudItem xs="2">
+        <h3>Remove All ToDos</h3>
+        <br/>
         <MudFab class="" Size="Size.Large" @onclick="DeleteAllToDos"
                 Color="Color.Error" StartIcon="@Icons.Material.Filled.Remove"/>
+        <br/>
     </MudItem>
     <MudItem xs="12">
         <MudGrid>
