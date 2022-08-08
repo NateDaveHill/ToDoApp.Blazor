@@ -1,17 +1,17 @@
 ﻿<MudNavMenu>
     <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
     <MudNavLink Href="counter" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Add">Counter</MudNavLink>
-    @foreach (var day in Days_todo)
+    @foreach (var day in daysToDo)
     {
-        <MudNavLink Href="monday" Match="NavLinkMatch.Prefix" Icon="@Icons.Filled.Storage" Tag=@day>@day</MudNavLink>
+        <MudNavLink Href="daily" Match="NavLinkMatch.Prefix" Icon="@Icons.Filled.Storage" Tag=@day>@day</MudNavLink>
     }
 </MudNavMenu>
 
 
 @code
 {
-    public List<string> Days_todo = new List<string>()
+    public List<string> daysToDo = new List<string>()
         {
-            "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"
+            "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
         };    
 }
