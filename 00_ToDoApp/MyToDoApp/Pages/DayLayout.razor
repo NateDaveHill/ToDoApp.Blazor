@@ -77,7 +77,7 @@
         var options = new DialogOptions { CloseOnEscapeKey = true, FullWidth = true };
         var dialog = DialogService.Show<AddNewToDoDialog>("Add new To Do", options);
         result = await dialog.Result;
-        if (result.Data.Equals(true))
+        if (result.Cancelled.Equals(true))
         {
             dialog.Close();
             Refresh();
