@@ -19,30 +19,32 @@
     </MudItem>
     <MudItem xs="12">
         <MudGrid>
-            @foreach (var toDo in ToDosOfDay)
+            @foreach (var toDo in ToDos)
             {
-                    <MudItem xs="6" sm="3">
-                        <br/>
-                        <MudPaper Height="150px" Width="200px" Elevation="3" Class="p-4"
-                                  Style="@($"color:{Theme.Palette.Dark}; background:{Theme.Palette.Warning};")">
-                            <MudGrid>
-                                <MudItem xs="12">
-                                    <MudCheckBox @bind-Checked="@toDo.IsDone" T="bool" Color="Color.Primary">
-                                        ToDo: @toDo.Title
-                                        <br/>
-                                        Comment: @toDo.Comment
-                                    </MudCheckBox>
-                                </MudItem>
-                                <MudItem xs="3"/>
-                                <MudItem xs="3"/>
-                                <MudItem xs="3">
-                                    <MudFab class="" Size="Size.Small" @onclick="args => DeleteToDo(args, toDo.Id)"
-                                            Color="Color.Error" StartIcon="@Icons.Material.Filled.Remove"/>
-                                </MudItem>
-                            </MudGrid>
-                        </MudPaper>
-                        <br/>
-                    </MudItem>
+                <MudItem xs="6" sm="3">
+                    <br/>
+                    <MudPaper Height="150px" Width="200px" Elevation="3" Class="p-4"
+                              Style="@($"color:{Theme.Palette.Dark}; background:{Theme.Palette.Warning};")">
+                        <MudGrid>
+                            <MudItem xs="12">
+                                <MudCheckBox @bind-Checked="@toDo.IsDone" T="bool" Color="Color.Primary">
+                                    ToDo: @toDo.Title
+                                    <br/>
+                                    Comment: @toDo.Comment
+                                </MudCheckBox>
+                            </MudItem>
+                            <MudItem xs="3"/>
+                            <MudItem xs="3"/>
+                            <MudItem xs="3">
+                                <MudButton class="md-fab md-fab-bottom-right" aria-label="Remove A ToDo"
+                                           @onclick="args => DeleteToDo(args, toDo.Id)">
+                                    <md-icon>Remove</md-icon>
+                                </MudButton>
+                            </MudItem>
+                        </MudGrid>
+                    </MudPaper>
+                    <br/>
+                </MudItem>
             }
         </MudGrid>
     </MudItem>
@@ -111,11 +113,14 @@
     {
         using (var context = new MyDbContext())
         {
-            NavMenu navMenu = new();
-            foreach (var day in navMenu.daysToDo)
-            {
-                ToDosOfDay = ToDos.Where(x => x.Created.DayOfWeek.ToString() == day).ToList();
-            }
+            ToDos = context.ToDos.Select(x => x).ToList();
+
+    //NavMenu navMenu = new();
+    //foreach (var day in navMenu.daysToDo)
+    //{
+    //    ToDosOfDay = ToDos.Where(x => x.Created.DayOfWeek.ToString() == day).ToList();
+    //}
         }
     }
+
 }
