@@ -1,7 +1,4 @@
-﻿@using MyToDoAppMudBlazor.Pages
-
-
-<MudDialog>
+﻿<MudDialog>
     <DialogContent>
         <h3>Title</h3>
         <MudTextField @bind-Value="TempToDos.Title"></MudTextField>
@@ -17,10 +14,13 @@
 
 @code {
 
+    [Inject]
+    private IDialogService DialogService { get; set; }
+
     [CascadingParameter]
     MudDialogInstance MudDialog { get; set; }
 
-    readonly ToDos TempToDos = new();
+    public ToDos TempToDos { get; set; } = new();
     public List<ToDos>? ToDos;
 
     protected override void OnInitialized()
@@ -36,14 +36,24 @@
     {
         using (var context = new MyDbContext())
         {
-            context.ToDos.Add(new ToDos
+            if (TempToDos.Title.Length > 10 || TempToDos.Comment.Length > 10)
             {
-                Title = TempToDos.Title,
-                Comment = TempToDos.Comment,
-                Created = DateTime.Now,
-                IsDone = false
-            });
-            context.SaveChanges();
+                DialogService.ShowMessageBox(
+                    "Test",
+                    "You have reached max capacity of characters, please use less to proceed.",
+                    "Okay");
+            }
+            else
+            {
+                context.ToDos.Add(new ToDos
+                {
+                    Title = TempToDos.Title,
+                    Comment = TempToDos.Comment,
+                    Created = DateTime.Now,
+                    IsDone = false
+                });
+                context.SaveChanges();
+            }
         }
         MudDialog.Close(DialogResult.Ok(true));
     }
