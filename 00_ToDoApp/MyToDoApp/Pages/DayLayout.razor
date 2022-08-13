@@ -120,12 +120,6 @@
         using (var context = new MyDbContext())
         {
             ToDos = context.ToDos.Select(x => x).ToList();
-
-    //NavMenu navMenu = new();
-    //foreach (var day in navMenu.daysToDo)
-    //{
-    //    ToDosOfDay = ToDos.Where(x => x.Created.DayOfWeek.ToString() == day).ToList();
-    //}
         }
     }
 
