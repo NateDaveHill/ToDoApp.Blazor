@@ -23,8 +23,9 @@
             {
                 <MudItem xs="6" sm="3">
                     <br/>
-                    <MudPaper Height="150px" Width="200px" Elevation="3" Class="p-4"
-                              Style="@($"color:{Theme.Palette.Dark}; background:{Theme.Palette.Warning};")">
+                    <MudPaper Height="100%" Width="100%" Elevation="3" 
+                              Style="@($"color:{Theme.Palette.Dark}; background:{Theme.Palette.Warning}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;")" 
+                              Class="p-4" Outlined="true">
                         <MudGrid>
                             <MudItem xs="12">
                                 <MudCheckBox @bind-Checked="@toDo.IsDone" T="bool" Color="Color.Primary">
